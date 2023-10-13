@@ -1,0 +1,196 @@
+
+
+#posts{
+    width: 80%;
+    border: 0px solid white;
+}
+
+#post-container{
+    width: 55%;
+    border: 0px solid white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post{
+    width: 100%;
+    border-top: 1px solid;
+    margin: 20px;
+    
+}
+
+#create-post{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+#create-post button{
+    background: #1E1E1E;
+    border: 1px solid #CCCCCC;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    /*center button*/
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+#create-post button:hover{
+    background: #CCCCCC;
+    color: black;
+}
+
+#create-post textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    width: 100%;
+    margin-right: 10px;
+    resize: none;
+    background-color: #1E1E1E;
+    color: white;
+}
+
+
+.post-header-info{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.post-header-info h3, .post-header-info p{
+    padding: 5px;
+}
+
+.post-content{
+    padding: 10px;
+    padding-left:20px;
+
+}
+
+.post-footer{
+    display: flex;
+    justify-content: end;
+} 
+
+.post-footer-likes{
+    padding: 10px;
+    list-style: none;
+  
+
+}
+
+.post-footer-likes li{
+    display: inline;
+    padding: 5px;
+}
+
+.post-footer-likes a{
+    text-decoration: none;
+    color: white;
+}
+
+.post-footer-likes a:hover{
+    color: #CCCCCC;
+}
+
+.post-footer-comments{
+    padding: 10px;
+}
+
+
+/*PAGINATOR*/
+#paginator{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#paginator ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#paginator ul li{
+    padding: 10px;
+}
+
+#paginator ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#paginator ul li a:hover{
+    color: #CCCCCC;
+}
+
+
+
+.like-button{
+    /* no background */
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1em;
+}
+
+.heart-icon {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.heart-icon:hover {
+    color: #ff0000; /* Cambia el color del icono al pasar el mouse */
+    transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el mouse */
+}
+
+/* Clase para el icono de corazón lleno (liked) */
+.liked .fas.fa-heart {
+    color: #ff0000; /* Color rojo para el corazón lleno */
+    transform: scale(1); /* Aumenta el tamaño del corazón lleno */
+    transition: color 0.5s, transform 0.5s; /* Transición suave para color y escala */
+}
+
+/* Clase para el icono de corazón vacío (not liked) */
+.not-liked .far.fa-heart {
+    color: inherit; /* Mantén el color por defecto del corazón vacío (puede ser gris) */
+    transform: scale(1); /* Tamaño normal del corazón vacío */
+    transition: color 0.5s, transform 0.5s; /* Transición suave para color y escala */
+}
+
+/* Efecto al hacer hover en el botón de "like" */
+.like-button:hover .fas.fa-heart {
+    color: #ff0000; /* Cambia el color al hacer hover */
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+}
+
+.like-button:hover .far.fa-heart {
+    color: #ff0000; /* Cambia el color al hacer hover */
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+}
+/*SPAN MUST BE IN LINE*/
+
+/* Estilos para la notificación */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: none; /* Oculta la notificación por defecto */
+    z-index: 999; /* Coloca la notificación en la parte superior */
+}
+

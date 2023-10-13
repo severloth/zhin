@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background: #333333 ;
+    color: white;
+    font-family: Lato, sans-serif;
+   
+}
+
+body #right-aside{
+    float: right;
+    border-left: 3px solid rgba(255,255,255,0.1);
+}
+
+#right-aside ul{
+    list-style: none;
+    padding-top: 50px;
+}
+
+#right-aside h3{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#right-aside{
+    height: 100vh;
+    width: 20%;
+    background: #1E1E1E ;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-right: 3px solid rgba(255,255,255,0.1);
+    float: right;
+    color: #CCCCCC;
+    position: fixed;
+    right: 0;
+
+}
+
+#right-aside ul li{
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    transition: 0.3s;
+    text-align: center;
+}
+
+#right-aside ul a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+
+}
+
+body aside{
+    height: 100vh;
+    width: 20%;
+    background: #1E1E1E ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 3px solid rgba(255,255,255,0.1);
+    float: left;
+    color: #CCCCCC;
+    position: fixed;
+ 
+}
+
+aside ul{
+    list-style: none;
+    padding-top: 50px;
+
+   
+}
+
+aside h2{
+    text-align: center;
+    margin-top: 0px;
+}
+
+aside ul li{
+    color: white;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    transition: 0.3s;
+    text-align: center;
+ 
+    
+   
+   
+}
+
+aside ul a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+
+}
+
+aside ul li:hover{
+    transition: 0.3s;
+    background: rgba(121,9,87,1);
+    color: white;
+}
+
+#overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*blur*/
+    filter: blur(100%);
+    
+}
+#liked_by{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+}
+.active{
+    display: block;
+}
