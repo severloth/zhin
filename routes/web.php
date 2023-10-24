@@ -25,8 +25,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/post/like/{slug}', [PostController::class, 'addLike'])->name('post.like');
     Route::get('/post/loadMorePosts', [PostController::class, 'loadMorePosts'])->name('post.loadMorePosts');
     
-
-
 });
 
 

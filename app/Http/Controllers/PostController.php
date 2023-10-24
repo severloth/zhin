@@ -57,6 +57,7 @@ class PostController extends Controller
         ]);
 
         $notice->save();
+        
         $notice ->notify(new TelegramPost());
     
 

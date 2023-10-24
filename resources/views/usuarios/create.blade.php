@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{url('./css/register_styles.css')}}">
     <title>Register</title>
     @vite('resources/css/app.css')
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    
 
 </head>
 <body>
