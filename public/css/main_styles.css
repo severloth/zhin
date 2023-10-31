@@ -4,16 +4,20 @@
     scroll-behavior: smooth;
 }
 
-
-body{
-    background: #333333 ;
+body {
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: white;
     font-family: Lato, sans-serif;
-   
+
 }
+
+
 
 body #right-aside{
     float: right;
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     border-left: 3px solid rgba(255,255,255,0.1);
 }
 
@@ -70,6 +74,9 @@ body aside{
     float: left;
     color: #CCCCCC;
     position: fixed;
+    background: url('../img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+  
  
 }
 
@@ -140,3 +147,127 @@ aside ul li:hover{
 .active{
     display: block;
 }
+
+.post-a p, .post-a h3, .post-a span{
+    color: white;
+    text-decoration: none;
+}
+
+.post-container a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+}
+
+.post-a{
+    text-decoration: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transition: 0.4s;
+}
+
+.post-a:hover{
+    transition: 0.4s;
+    background: rgba(243, 243, 243, 0.084);
+    color: white;
+}
+
+.comments-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.comments-section h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#comment-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#comment-form textarea{
+    width: 100%;
+    min-width: 400px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    form-sizing:content;
+    background-color: #000000;
+
+    color: white;
+}
+
+#comment-form button{
+    background: #000000;
+    border: 1px solid #CCCCCC;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    /*center button*/
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+#comment-form button:hover{
+    background: #CCCCCC;
+    color: black;
+}
+
+.comment{
+    width: 100%;
+    border-top: 1px solid white;
+    margin: 20px;
+    
+}
+.comment-author{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #CCCCCC;
+}
+
+#comment-list{
+    width: 100%;
+    margin-top: 20px;
+    list-style:none;
+}
+
+.comment-content{
+    font-size: 16px;
+    margin: 20px 0px;
+}
+
+.comment-timestamp{
+    font-size: 12px;
+    color: #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.comment-author {
+    display: flex;
+    align-items: center;
+}
+
+.comment-author img {
+    width: 40px; /* Tamaño deseado para la imagen de viñeta */
+    height: auto; /* Para mantener la proporción */
+    margin-right: 2px; /* Espacio entre la imagen y el nombre del autor */
+}
+
+.comment-author strong {
+    margin-right: 10px; /* Ajusta el valor según el espaciado deseado */
+}
+

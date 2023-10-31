@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZHIN</title>
     <link rel="stylesheet" href="{{url('./css/main_styles.css')}}">
     <link rel="stylesheet" href="{{url('./css/post_styles.css')}}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -56,13 +56,16 @@
     
 @foreach($posts as $post)
 
+<a href="{{url('/show/'.$post->slug)}}" class="post-a">
 <div class="post">
-   
+
 @include('posts._post')
 
-   
+</a>
+
 
 @endforeach
+</div>
 
 <div id="paginator" >
     {{$posts->links()}}

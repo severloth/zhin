@@ -65,6 +65,13 @@ class PostController extends Controller
         return redirect()->route('main.index');
     }
 
+    public function show($slug) {
+        $post = Post::where('slug', $slug)->first();
+        $comments = json_decode($post->comments_detail, true);
+        $user = User::find(auth()->user()->id);
+        return view('main.show', ['post' => $post, 'comments' => $comments, 'user' => $user]);
+    }
+
 
     public function addLike($slug)
     {
@@ -98,6 +105,41 @@ class PostController extends Controller
         ]);
     }
 
+    public function addComment($slug, Request $request) {
+        $request->validate([
+            'comments_detail' => 'required|string|min:1',
+        ], [
+            'comments_detail.required' => 'El campo de contenido está vacío',
+            
+        ]);
+        
+        // Recupera el post
+        $post = Post::where('slug', $slug)->firstOrFail();
+    
+        // Recupera los comentarios existentes
+        $comments = json_decode($post->comments_detail, true) ?? [];
+    
+        // Agrega el nuevo comentario al array
+        $user = User::find(auth()->user()->id);
+        $comment_detail = $request->comments_detail;
+        $comments[] = [
+            'user_id' => $user->id,
+            'comments_detail' => $comment_detail,
+            'created_at' => now(),
+        ];
+    
+        // Codifica el array de comentarios de vuelta a JSON
+        $post->comments_detail = json_encode($comments);
+        $post->comments = $post->comments + 1;
+    
+        // Guarda los cambios en la base de datos
+        $post->save();
+    
+        // Redirige de vuelta a la página de comentarios
+        return redirect()->route('post.show', $slug);
+    }
+
+ 
     
 
 

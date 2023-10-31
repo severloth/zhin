@@ -36,6 +36,8 @@ Route::middleware(['web'])->group(function () {
     Route::post('/login', [LoginController::class, 'login'])->name('login.login');
     Route::get('/user/create', [UserController::class, 'storage'])->name('user.storage');
     Route::get('/user/createNew', [UserController::class, 'create'])->name('user.create');
+    Route::get('/show/{slug}', [PostController::class, 'show'])->name('post.show');
+    Route::post('/post/comment/{slug}', [PostController::class, 'addComment'])->name('post.comment');
     
 });
 

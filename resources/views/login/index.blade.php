@@ -38,7 +38,7 @@
 
         </form>
 
-        <!---BUTTON FOR CREATE AN ACCOUNT my route is called user.create-->
+       
         <a href="{{route('user.create')}}">Crear cuenta</a>
 
       </div>

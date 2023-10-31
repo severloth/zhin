@@ -16,7 +16,8 @@ class Post extends Model
         'slug',
         'user_id',
         'likes',
-        'comments'
+        'comments',
+        'comments_detail'
     ];
 
     //liked by user

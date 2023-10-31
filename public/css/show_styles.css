@@ -1,0 +1,14 @@
+#comment-list{
+    max-height: 500px; /* Establece la altura máxima de la sección de comentarios */
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+
+#comment-list::-webkit-scrollbar {
+    width: 6px; /* Ancho de la barra de desplazamiento en navegadores WebKit */
+}
+
+#comment-list::-webkit-scrollbar-thumb {
+    background-color: #15467d8f; /* Color del "pulgares" de la barra de desplazamiento en navegadores WebKit */
+}

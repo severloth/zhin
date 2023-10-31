@@ -17,7 +17,7 @@
 
 .post{
     width: 100%;
-    border-top: 1px solid;
+    border-top: 1px solid white;
     margin: 20px;
     
 }
@@ -30,7 +30,7 @@
 }
 
 #create-post button{
-    background: #1E1E1E;
+    background: #000000;
     border: 1px solid #CCCCCC;
     color: white;
     padding: 10px;
@@ -55,7 +55,7 @@
     width: 100%;
     margin-right: 10px;
     resize: none;
-    background-color: #1E1E1E;
+    background-color: #000000;
     color: white;
 }
 
@@ -104,7 +104,21 @@
 
 .post-footer-comments{
     padding: 10px;
+    list-style: none;
+    text-decoration: none;
 }
+
+.post-footer-comments i{
+    display: inline;;
+    color: white;
+}
+
+.post-footer-comments a{
+    text-decoration: none;
+    color: white;
+}
+
+
 
 
 /*PAGINATOR*/

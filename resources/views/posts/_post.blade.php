@@ -3,7 +3,9 @@
 <link rel="stylesheet" href="{{url('./css/post_styles.css')}}">
 
 
+
 </head>
+
 <div class="post-header">
         <div class="post-header-info">
             
@@ -36,8 +38,10 @@
 </button>
         </div>
         <div class="post-footer-comments">
-            <p>{{$post->comments}} comments</p>
-        </div>
+        <span>{{ $post->comments }}</span>
+    <i class="far fa-comments"></i> <!-- Ícono de comentarios -->
+    
+</div>
         
     </div>
     <p> 
