@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('post', function (Blueprint $table) {
             $table->json('comments_detail')->nullable()->after('comments');
         });
     }
