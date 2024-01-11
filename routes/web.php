@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function () {
 
 //LOGIN
 
-Route::middleware(['web'])->group(function () {
+
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'login'])->name('login.login');
     Route::get('/user/create', [UserController::class, 'storage'])->name('user.storage');
@@ -39,6 +39,6 @@ Route::middleware(['web'])->group(function () {
     Route::get('/show/{slug}', [PostController::class, 'show'])->name('post.show');
     Route::post('/post/comment/{slug}', [PostController::class, 'addComment'])->name('post.comment');
     
-});
+
 
 
