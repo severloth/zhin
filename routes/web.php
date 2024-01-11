@@ -18,7 +18,6 @@ use App\Http\Controllers\PostController;
 */
 //Only auth routes:
 Route::middleware(['auth'])->group(function () {
-    Route::get('/', [MainController::class, 'index'])->name('main.index');
     Route::get('/user', [UserController::class, 'index'])->name('user.index');
     Route::post('/logout', [LoginController::class, 'logout'])->name('login.logout');
     Route::get('/post/create', [PostController::class, 'store'])->name('post.store');
@@ -26,6 +25,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/post/loadMorePosts', [PostController::class, 'loadMorePosts'])->name('post.loadMorePosts');
     
 });
+
+Route::get('/', [MainController::class, 'index'])->name('main.index');
+
 
 
 
