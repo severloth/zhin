@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('post', function (Blueprint $table) {
             //add an array "liked by" 
             $table->json('liked_by')->nullable();
             
@@ -23,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
+        Schema::table('post', function (Blueprint $table) {
             //
         });
     }
