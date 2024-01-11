@@ -27,7 +27,7 @@
       <div id="login_form">
         <form action="{{url('/login')}}" method="POST">
         @csrf
-        <h3>Iniciar sesión</h3>
+        <h3>Iniciar sesión ahora</h3>
         <label for="username">Username</label>
         <input type="text" name="username" placeholder="">
 
